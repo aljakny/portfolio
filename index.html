@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>أحمد الجكني — مصمم ومطور</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    @media (max-width: 768px) {
+      .about-grid > *:first-child,
+      .about-grid > *:last-child {
+        grid-column: span 12;
+      }
+      .about-border {
+        border-right: none !important;
+        padding-right: 0 !important;
+        border-top: 1px solid rgba(212, 175, 55, 0.3);
+        padding-top: 24px;
+        margin-top: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Desktop Navigation -->
+  <header class="nav-desktop">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Ahmed Aljakni</a>
+      <nav class="flex gap-6 items-center">
+        <a href="index.html" class="nav-link active">الرئيسية</a>
+        <a href="consulting.html" class="nav-link">الاستشارات</a>
+        <a href="contact.html" class="nav-link">تواصل</a>
+      </nav>
+      <div class="flex items-center gap-4">
+        <button class="lang-switcher">English</button>
+        <div class="nav-separator"></div>
+        <a href="mailto:ahmedaljakni@gmail.com" class="social-icon"><span class="material-symbols-outlined">mail</span></a>
+        <a href="https://twitter.com/ahmedaljakni" target="_blank" rel="noopener noreferrer" class="social-icon"><span class="material-symbols-outlined">close</span></a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation -->
+  <nav class="nav-mobile">
+    <a href="index.html" class="nav-mobile-link active">
+      <span class="material-symbols-outlined fill">home</span>
+      <span>الرئيسية</span>
+    </a>
+    <a href="consulting.html" class="nav-mobile-link">
+      <span class="material-symbols-outlined">settings_suggest</span>
+      <span>الاستشارات</span>
+    </a>
+    <a href="contact.html" class="nav-mobile-link">
+      <span class="material-symbols-outlined">mail</span>
+      <span>تواصل</span>
+    </a>
+  </nav>
+  
+  <main>
+    <!-- Hero Section -->
+    <section class="hero container section">
+      <div class="hero-content">
+        <h1 class="text-display-lg hero-title fade-up">أحمد الجكني</h1>
+        <p class="text-body-lg text-on-surface-variant max-w-2xl leading-relaxed fade-up mb-8">
+          خبير في إدارة المشاريع التقنية، تصميم واجهات المستخدم، وتطوير الواجهات الأمامية. أجمع بين الرؤية الإبداعية والتنفيذ التقني لبناء تجارب رقمية استثنائية.
+        </p>
+        <div class="hero-cta-group fade-up">
+          <a href="consulting.html" class="btn-primary">اكتشف خدماتي</a>
+          <a href="contact.html" class="btn-secondary">تواصل معي</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-portrait-wrapper">
+          <div class="hero-portrait-shader">
+            <canvas id="shader-canvas"></canvas>
+          </div>
+          <div class="hero-portrait-frame">
+            <img src="assets/images/original-portrait.jpg" alt="أحمد الجكني">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="container section fade-up">
+      <div class="glass-panel" style="padding: 32px; border-radius: 24px; position: relative; overflow: hidden;">
+        <div class="ambient-orb gold" style="position: absolute; top: -50%; right: -25%; width: 256px; height: 256px; opacity: 0.1;"></div>
+        <div class="grid-12 about-grid" style="position: relative; z-index: 10;">
+          <div style="grid-column: span 6;">
+            <h2 class="text-headline-md text-gold mb-6">الخبرة الأكاديمية والعملية</h2>
+            <p class="text-body-md text-on-surface-variant leading-relaxed">
+              حاصل على درجة الماجستير في تقنية المعلومات، أجمع بين المعرفة النظرية العميقة والتطبيق العملي في بيئات العمل المتطورة.
+            </p>
+          </div>
+          <div style="grid-column: span 6; display: flex; flex-direction: column; justify-content: center;">
+            <p class="text-body-md text-on-surface-variant leading-relaxed about-border" style="border-right: 1px solid rgba(212, 175, 55, 0.3); padding-right: 24px;">
+              رحلتي المهنية تمتد عبر إدارة المشاريع التقنية الحساسة، وصولاً إلى صياغة تجارب مستخدم استثنائية وبناء واجهات أمامية متينة. أؤمن بالتصميم المعتمد على البيانات والحلول التقنية المستدامة.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Expertise & Services Bento Grid (All 7 Areas) -->
+    <section class="container section">
+      <h2 class="text-headline-md text-gold mb-16 text-center fade-up">مجالات الخبرة والخدمات التقنية</h2>
+      <div class="bento-grid stagger-children">
+        <!-- 1. UI/UX Design -->
+        <div class="expertise-card fade-up">
+          <div class="card-bg" style="background-image: url('assets/images/ui-ux-design.jpg')"></div>
+          <div class="card-overlay"></div>
+          <div class="card-content">
+            <span class="material-symbols-outlined card-icon">design_services</span>
+            <h3 class="text-headline-sm text-gold">تصميم واجهات المستخدم</h3>
+            <p class="text-body-md text-on-surface-variant mt-2">خلق تجارب بصرية مذهلة وعملية ومتمحورة حول المستخدم.</p>
+          </div>
+        </div>
+
+        <!-- 2. Front-End Development -->
+        <div class="expertise-card fade-up">
+          <div class="card-bg" style="background-image: url('assets/images/frontend-dev.jpg')"></div>
+          <div class="card-overlay"></div>
+          <div class="card-content">
+            <span class="material-symbols-outlined card-icon">code</span>
+            <h3 class="text-headline-sm text-gold">تطوير الواجهات الأمامية للويب</h3>
+            <p class="text-body-md text-on-surface-variant mt-2">بناء واجهات تفاعلية عالية الأداء بأحدث التقنيات.</p>
+          </div>
+        </div>
+
+        <!-- 3. Computer Maintenance -->
+        <div class="expertise-card fade-up">
+          <div class="card-bg" style="background-image: url('assets/images/computer-maintenance.jpg')"></div>
+          <div class="card-overlay"></div>
+          <div class="card-content">
+            <span class="material-symbols-outlined card-icon">build</span>
+            <h3 class="text-headline-sm text-gold">صيانة الحاسب الآلي</h3>
+            <p class="text-body-md text-on-surface-variant mt-2">تشخيص وحل المشاكل العتادية والبرمجية بكفاءة وخبرة عالية.</p>
+          </div>
+        </div>
+
+        <!-- 4. Digital Infrastructure (Wide 2-col) -->
+        <div class="expertise-card card-wide fade-up">
+          <div class="card-bg" style="background-image: url('assets/images/infrastructure.jpg')"></div>
+          <div class="card-overlay"></div>
+          <div class="card-content">
+            <span class="material-symbols-outlined card-icon">architecture</span>
+            <h3 class="text-headline-sm text-gold">تصميم البنية التحتية الرقمية</h3>
+            <p class="text-body-md text-on-surface-variant mt-2">هندسة وبناء أنظمة رقمية متينة وقابلة للتوسع تناسب احتياجات المؤسسات الكبرى، مع التركيز على الأمان والكفاءة.</p>
+          </div>
+        </div>
+
+        <!-- 5. Digital Transformation -->
+        <div class="expertise-card fade-up">
+          <div class="card-bg" style="background-image: url('assets/images/digital-transformation.jpg')"></div>
+          <div class="card-overlay"></div>
+          <div class="card-content">
+            <span class="material-symbols-outlined card-icon">psychology</span>
+            <h3 class="text-headline-sm text-gold">استشارات التحول الرقمي</h3>
+            <p class="text-body-md text-on-surface-variant mt-2">توجيه استراتيجي لنقل العمليات التقليدية إلى بيئات عمل رقمية متطورة، وتحسين تجربة المستخدم.</p>
+          </div>
+        </div>
+
+        <!-- 6. Advanced Technical Support -->
+        <div class="expertise-card fade-up">
+          <div class="card-bg" style="background-image: url('assets/images/tech-support.jpg')"></div>
+          <div class="card-overlay"></div>
+          <div class="card-content">
+            <span class="material-symbols-outlined card-icon">support_agent</span>
+            <h3 class="text-headline-sm text-gold">الدعم التقني المتقدم</h3>
+            <p class="text-body-md text-on-surface-variant mt-2">حلول فورية ومستدامة للتحديات التقنية المعقدة، لضمان استمرارية الأعمال بأعلى مستويات الجودة.</p>
+          </div>
+        </div>
+
+        <!-- 7. Social Responsibility (Wide 2-col) -->
+        <div class="expertise-card card-wide fade-up">
+          <div class="card-bg" style="background-image: url('assets/images/social-responsibility.jpg')"></div>
+          <div class="card-overlay"></div>
+          <div class="card-content">
+            <span class="material-symbols-outlined card-icon">volunteer_activism</span>
+            <h3 class="text-headline-sm text-gold">المسؤولية الاجتماعية والمبادرات المجانية</h3>
+            <p class="text-body-md text-on-surface-variant mt-2">إيماناً منا بأهمية التكافل التقني، نخصص جزءاً من مواردنا لتقديم الدعم الفني والاستشارات المجانية للجمعيات الخيرية والأفراد والشركات الناشئة.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <a href="index.html" class="nav-logo">Ahmed Aljakni</a>
+      <p class="text-body-md text-on-surface-variant">© 2026 Ahmed Aljakni. جميع الحقوق محفوظة.</p>
+      <div class="footer-links">
+        <a href="https://twitter.com/ahmedaljakni" target="_blank" rel="noopener noreferrer" class="footer-link">X</a>
+        <a href="mailto:ahmedaljakni@gmail.com" class="footer-link">البريد</a>
+      </div>
+    </div>
+  </footer>
+  
+  <div class="page-transition"></div>
+  
+  <script src="js/shader.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
