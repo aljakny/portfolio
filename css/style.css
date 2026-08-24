@@ -1,5 +1,5 @@
 /* Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;600&family=IBM+Plex+Sans:wght@400;600&family=Playfair+Display:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap');
 /* Material Symbols */
 @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap');
 
@@ -24,8 +24,8 @@
   --on-surface-variant: #c7c6ca;
   --error: #ffb4ab;
   --font-display: 'Playfair Display', Georgia, serif;
-  --font-body: 'IBM Plex Sans Arabic', 'IBM Plex Sans', system-ui, sans-serif;
-  --font-label: 'IBM Plex Sans Arabic', 'IBM Plex Sans', system-ui, sans-serif;
+  --font-body: 'Almarai', 'IBM Plex Sans Arabic', system-ui, sans-serif;
+  --font-label: 'Almarai', 'IBM Plex Sans Arabic', system-ui, sans-serif;
 }
 
 /* Reset & Base */
@@ -501,6 +501,19 @@ body {
   border-top: 1px solid rgba(70, 70, 74, 0.05);
   background: var(--obsidian-light);
 }
+.site-footer .nav-logo,
+.site-footer p {
+  color: var(--gold) !important;
+  transition: color 0.3s ease, text-shadow 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+  cursor: pointer;
+}
+.site-footer .nav-logo:hover,
+.site-footer p:hover {
+  color: #fff !important;
+  text-shadow: 0 0 16px rgba(233, 195, 73, 0.7);
+  transform: translateY(-2px);
+}
 .footer-inner {
   display: flex;
   flex-direction: column;
@@ -521,14 +534,26 @@ body {
   gap: 24px;
 }
 .footer-link {
-  color: var(--on-surface-variant);
+  color: var(--gold);
   text-decoration: none;
   font-family: var(--font-body);
   font-size: 16px;
-  transition: color 0.3s;
+  transition: color 0.3s ease, text-shadow 0.3s ease, transform 0.3s ease;
+  display: inline-block;
 }
 .footer-link:hover {
-  color: var(--gold);
+  color: #fff;
+  text-shadow: 0 0 16px rgba(233, 195, 73, 0.7);
+  transform: translateY(-2px);
+}
+
+/* Heading Hover Effect — all h1/h2/h3 */
+h1, h2, h3 {
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+h1:hover, h2:hover, h3:hover {
+  color: var(--gold) !important;
+  text-shadow: 0 0 20px rgba(233, 195, 73, 0.35);
 }
 
 /* Language Switcher */
