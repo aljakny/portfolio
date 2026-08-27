@@ -141,7 +141,27 @@ document.addEventListener('DOMContentLoaded', () => {
       });
 
       if (valid) {
-        // Show success state
+        // Setup standard form submission to open in new tab (required to trigger FormSubmit activation)
+        contactForm.action = "https://formsubmit.co/ahmedaljakni@gmail.com";
+        contactForm.method = "POST";
+        contactForm.target = "_blank";
+        
+        // Ensure inputs have name attributes for standard POST
+        contactForm.querySelector('#name').name = "name";
+        contactForm.querySelector('#email').name = "email";
+        contactForm.querySelector('#subject').name = "subject";
+        contactForm.querySelector('#message').name = "message";
+        
+        // Add FormSubmit settings
+        if (!contactForm.querySelector('input[name="_captcha"]')) {
+            contactForm.insertAdjacentHTML('beforeend', '<input type="hidden" name="_captcha" value="false">');
+            contactForm.insertAdjacentHTML('beforeend', '<input type="hidden" name="_template" value="table">');
+        }
+        
+        // Submit the form
+        contactForm.submit();
+        
+        // Show success state on the current page
         contactForm.style.display = 'none';
         const success = document.querySelector('.form-success');
         if (success) success.classList.add('show');

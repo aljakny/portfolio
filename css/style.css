@@ -1162,3 +1162,8 @@ h1:hover, h2:hover, h3:hover {
   .mobile-hidden { display: none; }
   .mobile-show { display: block; }
 }
+
+/* Brand Logo Animation */
+.nav-logo { display: flex; align-items: center; text-decoration: none; padding-top: 8px; }
+.brand-logo { height: 65px; border-radius: 8px; width: auto; transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.5s ease; filter: brightness(1.15) drop-shadow(0 0 8px rgba(212, 175, 55, 0.3)); }
+.brand-logo:hover { transform: scale(1.12) rotate(-2deg); filter: brightness(1.35) drop-shadow(0 0 25px rgba(212, 175, 55, 0.9)); }
